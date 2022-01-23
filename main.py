@@ -41,12 +41,12 @@ if not os.path.exists(abspath('/files/')):
     
 @app.errorhandler(HTTPException)
 def error_handler(e):
-    return render_template('error.html',error=e), e.code
+    return render_template('error.html.jinja',error=e), e.code
 
 @limiter.limit("6/minute")
 @app.get('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html.jinja')
 
 @limiter.limit("6/minute")
 @app.get('/files/<file>')
@@ -60,7 +60,7 @@ def collection(cid):
     s = [x for x in mycursor]
     t = s[0][1]
     ids = t.replace(']','').replace('[','').replace("'",'').replace(',', ' ').split()#i have no idea what i am doing
-    return render_template('collection.html', collection = ids, cid = cid)
+    return render_template('collection.html.jinja', collection = ids, cid = cid)
 
 @limiter.limit("2/minute")
 @app.post('/upload')
