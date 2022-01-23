@@ -1,0 +1,63 @@
+body {
+    background-color: #000000;
+    color: #FFFDD0;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flashes {
+    color: #8a0303;
+    margin: 20px 0;
+    border: solid;
+    border-color: #4682b4;
+}
+
+input[type="submit"]:hover {
+    color: #7C7B7B;
+}
+
+input[type="submit"] {
+    margin: 20px 0;
+    border: solid;
+    border-color: #4682b4;
+    color: #8a0303;
+    background-color: #000000;
+}
+
+.lihidden {
+    margin: 20px 0;
+    border: solid;
+    border-color: #4682b4;
+    margin-bottom: -2rem;
+    list-style-type: none;
+}
+
+.lihidden a {
+    color: #8a0303;
+}
+
+::-webkit-file-upload-button {
+    border: dashed;
+    border-color: #4682b4;
+    text-transform: lowercase;
+    background-color: #000000;
+    color: #8a0303;
+}
+
+.fork-me {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+.errorTitle {
+    font-size: 1.25rem;
+    line-height: 1;
+    white-space: nowrap;
+}

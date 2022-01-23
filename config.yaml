@@ -1,0 +1,18 @@
+trim_blocks: true
+lstrip_blocks: true
+host: ""
+user: ""
+password: ""
+database: ""
+extensions:
+  - 'txt'
+  - 'pdf'
+  - 'png'
+  - 'jpg'
+  - 'jpeg'
+  - 'gif'
+port: 5000
+debug: false
+default_limits:
+  - '6/minute'
+  - '60/hour'

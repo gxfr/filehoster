@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>collection {{ cid }} on file hoster</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗃️</text></svg>">
+</head>
+<body>
+    <a class = "fork-me" href="https://github.com/gxfr/filehoster">
+        <img loading="lazy" width="149" height="149" src="/static/forkme.png" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
+    </a>
+    <div class="centered">
+        {% set c = collection %}
+        <ul>
+        {% for item in c %}
+            <li class="lihidden"><a class="filelist" href="/files/{{ item }}">{{ item }}</a></li><br/>
+        {% endfor %}
+        </ul>
+        {% include 'flash.html' %}
+    </div>
+</body>
+</html>
